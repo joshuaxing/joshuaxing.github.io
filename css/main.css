@@ -1961,7 +1961,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #331365;
+  background: #ad5d74;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3063,4 +3063,20 @@ hr {
 .post-button a:hover {
   background: #ea6f5a;
   color: #fff;
+}
+.footer-inner {
+  text-align: center;
+}
+.with-love {
+  color: #f63535;
+}
+.social-share .icon-wechat .wechat-qrcode .qrcode {
+  height: 100px;
+}
+.site-overview {
+  position: relative;
+}
+.myvideo {
+  width: 100%;
+  height: 86px;
 }
