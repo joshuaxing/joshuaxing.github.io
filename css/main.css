@@ -1961,7 +1961,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #aa87d7;
+  background: #ff4b12;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3052,26 +3052,6 @@ hr {
   padding: 25px;
   -webkit-box-shadow: 0 0 5px rgba(202,203,203,0.5);
   -moz-box-shadow: 0 0 5px rgba(202,203,204,0.5);
-}
-.post-button a {
-  border: none;
-  background: #f5f5f5;
-  padding: 2px 5px;
-  border-radius: 3px;
-  color: #333;
-}
-.post-button a:hover {
-  background: #ea6f5a;
-  color: #fff;
-}
-.footer-inner {
-  text-align: center;
-}
-.with-love {
-  color: #f63535;
-}
-.social-share .icon-wechat .wechat-qrcode .qrcode {
-  height: 100px;
 }
 .footer-inner {
   text-align: center;
