@@ -1,9 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[NodeJS---了解的一些linux知识]]></title>
+    <url>%2F2018%2F04%2F05%2FNodeJS---%E4%BA%86%E8%A7%A3%E7%9A%84%E4%B8%80%E4%BA%9Blinux%E7%9F%A5%E8%AF%86%2F</url>
+    <content type="text"><![CDATA[centOS目录结构 /: 根目录,一般根目录下只存放目录,不要存放文件,/etc、/bin、/dev、/lib、/sbin应该和根目录放置在一个分区中。 /root: 系统管理员root的家目录,系统第一个启动的分区为/,所以最好将/root和/放置在一个分区下。 /usr: 应用程序存放目录。 /usr/bin存放应用程序,可执行二进制文件的目录和/bin相似/usr/share存放共享数据/usr/lib存放不能直接运行的,却是许多程序运行所必需的一些函数库文件/usr/local存放软件升级包/usr/share/doc系统说明文件存放目录 /var: 放置系统执行过程中经常变化的文件。 /var/log随时更改的日志文件/var/log/message所有的登录文件存放目录/var/spool/mail邮件存放的目录/var/run程序或服务启动 /bin:可执行二进制文件的目录,如常用的命令ls、tar、mv、cat等。 /opt:给主机额外安装软件所摆放的目录。 linux的ln指令详解 命令功能：Linux文件系统中，有所谓的链接(link)，我们可以将其视为档案的别名，而链接又可分为两种 : 硬链接(hard link)与软链接(symbolic link)。 在这里我们解释一下目录项（dentry）的概念。每一个文件一般表示就是使用目录项，每个目录项包含着该文件的名字，该文件指向的inode节点标号，linux把目录和文件都用目录项表示。 硬链接：硬链接可以认为是一个指针，指向原文件inode的指针，系统不为它重新分配inode和创建文件，即硬链接和原文件是同一个文件。其新建一个目录项，指向被链接的inode节点，一个inode节点可以指向多个目录项。软链接：它是指向另一个文件的特殊文件，这种文件的数据部分仅仅包含了它所要连接文件的路径名。软链接同样也是新建一个目录项，指向一个新的inode节点，但这个inode节点的文件数据指针指向所引用文件的真实地址。 注意点：ln命令会保持每一处链接文件的同步性，硬链接会在你选定的位置上生成一个和源文件大小相同的文件，软链接只会在你选定的位置上生成一个文件的镜像，不会占用磁盘空间。 ln命令格式：123456ln [参数][源文件或目录][目标文件或目录]ln [源文件或目录][目标文件或目录] ~~~~~~~硬链接ln -s [源文件或目录][目标文件或目录] ~~~~~软链接//创建软链接，使node和npm命令全局有效ln -s /root/node-v8.9.3-linux-x64/bin/node /usr/local/bin/nodeln -s /root/node-v8.9.3-linux-x64/bin/npm /usr/local/bin/npm linux查看和修改PATH环境变量的方法添加mongodb-install-directory的路径为/var/lib/mongodb为环境变量的四种方案 export PATH=&lt;mongodb-install-directory&gt;/bin:$PATH 直接在终端下输入 export PATH=/var/lib/mongodb/bin:$PATH配置完后可以通过echo $PATH查看配置结果生效方法：立即生效有效期限：临时改变，只能在当前的终端窗口中有效，当前窗口关闭后就会恢复原有的path配置用户局限：仅对当前用户 通过修改.bashrc文件: vim ~/.bashrc (推荐)//在最后一行添上：export PATH=export PATH=/var/lib/mongodb/bin:$PATH生效方法：（有以下两种）1、关闭当前终端窗口，重新打开一个新终端窗口就能生效2、输入source ~/.bashrc命令，立即生效有效期限：永久有效用户局限：仅对当前用户 通过修改profile文件: vim /etc/profileexport PATH 找到设置PATH的行，添加export PATH=export PATH=/var/lib/mongodb/bin:$PATH生效方法：系统重启有效期限：永久有效用户局限：对所有用户 通过修改environment文件: vim /etc/environment 1PATH=&quot;/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin&quot;中加入&quot;:/usr/local/mongodb/bin&quot; 生效方法：系统重启有效期限：永久有效用户局限：对所有用户 环境变量的查看与删除 echo $PATH: 查看单个环境变量 env: 查看所有环境变量 set: 查看所有本地定义的环境变量 unset $变量名: 可以删除指定的环境变量 常用的环境变量 PATH 决定了shell将到哪些目录中寻找命令或程序 HOME当前用户主目录 HISTSIZE 历史记录数 LOGNAME 当前用户的登录名 HOSTNAME 指主机的名称 SHELL 当前用户Shell类型 LANGUGE 语言相关的环境变量，多语言可以修改此环境变量 MAIL 当前用户的邮件存放目录 PS1 基本提示符，对于root用户是#，对于普通用户是$ linux命令]]></content>
+      <categories>
+        <category>linux</category>
+      </categories>
+      <tags>
+        <tag>linux</tag>
+        <tag>nodeJS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[NodeJS---部署阿里云上nodeJS安装]]></title>
+    <url>%2F2018%2F04%2F04%2FNodeJS---%E9%83%A8%E7%BD%B2%E9%98%BF%E9%87%8C%E4%BA%91%E4%B8%8AnodeJS%E5%AE%89%E8%A3%85%2F</url>
+    <content type="text"><![CDATA[步骤1: 远程连接服务器 推荐就是辣么好用的 Bitvise SSH Client 步骤2: 安装Node.js使用二进制文件安装 该部署过程使用的安装包是已编译好的二进制文件，解压之后，在bin文件夹中就已存在node和npm，无需手工编译。安装步骤： wget命令下载Node.js安装包wget https://nodejs.org/dist/v8.9.3/node-v8.9.3-linux-x64.tar.xz wget命令下载Node.js安装包tar xvf node-v8.9.3-linux-x64.tar.xz 创建软链接，使node和npm命令全局有效。通过创建软链接的方法，使得在任意目录下都可以直接使用node和npm命令 12ln -s /root/node-v8.9.3-linux-x64/bin/node /usr/local/bin/nodeln -s /root/node-v8.9.3-linux-x64/bin/npm /usr/local/bin/npm 查看node、npm版本 12node -vnpm -v 至此，Node.js环境已安装完毕。软件默认安装在/root/node-v6.9.5-linux-x64/目录下。如果需要将该软件安装到其他目录（如：/opt/node/）下，请进行如下操作 123456mkdir -p /opt/node/mv /root/node-v8.9.3-linux-x64/* /opt/node/rm -f /usr/local/bin/noderm -f /usr/local/bin/npmln -s /opt/node/bin/node /usr/local/bin/nodeln -s /opt/node/bin/npm /usr/local/bin/npm 步骤3: 部署测试项目 新建一个测试项目文件 123cd ~mkdir -p /testtouch /test/test.js 使用vim编辑器打开项目文件test.js 123yum install vimcd /testvim test.js 输入 i或者使用insert按钮,进入编辑模式（左下角出现-- INSERT --状态）将以下项目文件内容粘贴到test.js中。使用Esc按钮，退出编辑模式（左下角没有任何状态），输入:wq保存文件内容并退出 1234567891011const http = require(&apos;http&apos;);const hostname = &apos;0.0.0.0&apos;;const port = 3000;const server = http.createServer((req, res) =&gt; &#123; res.statusCode = 200; res.setHeader(&apos;Content-Type&apos;, &apos;text/plain&apos;); res.end(&apos;Hello World\n&apos;);&#125;);server.listen(port, hostname, () =&gt; &#123; console.log(`Server running at http://$&#123;hostname&#125;:$&#123;port&#125;/`);&#125;); 查看服务器的端口号3.1 netstat -tpln查看项目的port端口号是否存在(如本示例中为TCP 3000端口）3.2 端口号不存在,登录ECS管理控制台，并在安全组中 添加安全组规则 放行端口:登陆阿里云– 控制台（右上角）–云服务器ECS（左边栏）–网络与安全–安全组选择服务器所在的地域–找到要配置授权规则的安全组，在操作列中，单击配置规则点击添加安全组按钮，填写弹框内容，确认。 123*端口范围： 3000/3000授权类型：地址段访问*授权对象：0.0.0.0/0 安装pm2,以node安装路径为/opt/node/为例 12345678910npm install pm2@latest -gln -s /opt/node/bin/pm2 /usr/local/bin/pm2pm2 -v 查看pm2命令pm2 start app.js //运行项目pm2 status //查找项目idpm2 stop id //停止项目pm2 restart id //重启应用pm2 list //查看运行状态pm2 monit //追踪资源运行情况pm2 kill //停止所有项目 运行项目4.1 node test.js 12cd /testnode test.js 4.2 pm2 start test.js 12cd /testpm2 start test.js 访问地址 公网IP:3000 当当当，跑起来了，旋转跳跃，开森开森]]></content>
+      <categories>
+        <category>nodeJS</category>
+      </categories>
+      <tags>
+        <tag>nodeJS</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[三月春风似剪刀]]></title>
     <url>%2F2018%2F03%2F11%2F%E4%B8%89%E6%9C%88%E6%98%A5%E9%A3%8E%E4%BC%BC%E5%89%AA%E5%88%80%2F</url>
-    <content type="text"><![CDATA[三月，一个拖延症的季节 今天是28号，回忆的却是半月前某天的情绪，有时候就在想我是不是已经病入膏肓，病的都能把情绪拖延这么长。那天是中午出门的瞬间，一丝暖风拂来，脸是绵的，手脚是软的，眼睛很自然的闭了起来，我清楚的感受到我身体的各个部位都在做什么，这种感觉现在想起来都会感觉太自由太美好了。当时我忘记要去做什么，就追着阳光，一路蹦蹦跳跳，时不时在忍不住的笑，我踩了踩墙角的青苔，看了看梧桐的枝梢，是春天啊！]]></content>
+    <content type="text"><![CDATA[三月，一个拖延症的季节 出门微风拂面，面朝太阳就露出笑脸]]></content>
       <categories>
         <category>life</category>
       </categories>
