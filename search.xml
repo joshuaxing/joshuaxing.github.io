@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[NodeJS---mongodb的安装]]></title>
     <url>%2F2018%2F04%2F07%2FNodeJS-mongodb%E7%9A%84%E5%AE%89%E8%A3%85%2F</url>
-    <content type="text"></content>
+    <content type="text"><![CDATA[Linux下安装MongoDB的实现步骤安装配置mongodb /opt/mongodb/ mongodb安装位置 /opt/mongodb/bin mongodb命令目录 /var/mongodb/data 数据存放目录 /var/mongodb/logs/mongod.log 日志存放目录及文件 /var/mongodb/mongodb.conf mongodb启动配置文件 wget命令下载Node.js安装包wget https://fastdl.mongodb.org/linux/mongodb-linux-x86_64-3.4.5.tgz 解压文件,并移动mongodb安装包 12tar zxvf mongodb-linux-x86_64-3.4.5.tgzmv /root/mongodb-linux-x86_64-3.4.5/* /opt/mongodb/ 创建数据和日志存放目录 12345mkdir /var/mongodbmkdir /var/mongodb/datamkdir /var/mongodb/logstouch /var/mongodb/logs/mongod.logtouch /var/mongodb/mongodb.conf 打开rc.local文件，添加CentOS开机启动项,让mongodb开机自启动 12vim /etc/rc.d/rc.local/opt/mongodb/bin/mongod --dbpath=/var/mongodb/data --logpath=/var/mongodb/logs/mongod.log --fork --logappend 设置mongodb命令的环境变量 123#vi ~/.bash_profile //进入编辑export PATH=/opt/mongodb/bin:$PATH //文件添加内容#source ~/.bash_profile //文件生成 mongodb的启动 mongodb启动时，如果没有设置环境变量，则用./mongod 参数启动 12cd /opt/mongodb/binmongod --dbpath=/var/mongodb/data --logpath= /var/mongodb/logs/mongod.log --logappend 使用配置文件启动（/var/mongodb/mongodb.conf）配置文件 12345678910111213141516#启用日志文件，默认启用journal=true#这个选项可以过滤掉一些无用的日志信息，若需要调试使用请设置为falsequiet=false#日志文件位置logpath=/var/mongodb/logs/mongod.log#以追加方式写入日志logappend=true#是否以守护进程方式运行fork = false#默认27017port = 27017# 数据库文件位置dbpath=/var/mongodb/data/#启用定期记录CPU利用率和 I/O 等待cpu = true 启动 12cd /opt/mongodb/binmongod --config /var/mongodb/mongodb.conf 系统服务启动参考 开放端口27017 123# vi /etc/sysconfig/iptables -A INPUT -m state --state NEW -m tcp -p tcp --dport 27017 -j ACCEPT # service iptables restart 查看mongodb启动结果netstat -pan|grep 27017 若数据库出现如不能连上，则是一个data目录下的mongod.lock文件的问题，可以用如下的修复的命令， mongod --repair MongoDB运行日志自动分割windows下MongoDB的安装及配置]]></content>
       <categories>
         <category>mongodb</category>
       </categories>
@@ -16,6 +16,12 @@
     <title><![CDATA[网络基础知识之 HTTP 协议]]></title>
     <url>%2F2018%2F04%2F06%2F%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E4%B9%8B%20HTTP%20%E5%8D%8F%E8%AE%AE%2F</url>
     <content type="text"></content>
+      <categories>
+        <category>HTTP</category>
+      </categories>
+      <tags>
+        <tag>HTTP</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[NodeJS---了解的一些linux知识]]></title>

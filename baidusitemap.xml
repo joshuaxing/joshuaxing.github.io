@@ -5,7 +5,7 @@
     
   <url>
     <loc>http://www.xshaohua.cc/2018/04/07/NodeJS-mongodb%E7%9A%84%E5%AE%89%E8%A3%85/</loc>
-    <lastmod>2018-04-07T07:05:13.809Z</lastmod>
+    <lastmod>2018-04-07T11:10:29.036Z</lastmod>
     <data>
         <display>
         <title>NodeJS---mongodb的安装</title>
@@ -27,14 +27,19 @@
     
   <url>
     <loc>http://www.xshaohua.cc/2018/04/06/%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E4%B9%8B%20HTTP%20%E5%8D%8F%E8%AE%AE/</loc>
-    <lastmod>2018-04-06T12:39:57.446Z</lastmod>
+    <lastmod>2018-04-07T10:46:55.980Z</lastmod>
     <data>
         <display>
         <title>网络基础知识之 HTTP 协议</title>
         <pubTime>2018-04-06T12:38:14.000Z</pubTime>
         
+        <tag>HTTP</tag>
+         
          
            
+             
+              <breadCrumb title="HTTP" url="http://www.xshaohua.cc/categories/HTTP/"/>
+          
         </display>
     </data>
     </url>
