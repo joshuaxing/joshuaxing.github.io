@@ -5,7 +5,7 @@
     
   <url>
     <loc>http://www.xshaohua.cc/2018/04/07/NodeJS-mongodb%E7%9A%84%E5%AE%89%E8%A3%85/</loc>
-    <lastmod>2018-04-07T11:10:29.036Z</lastmod>
+    <lastmod>2018-04-08T16:29:41.165Z</lastmod>
     <data>
         <display>
         <title>NodeJS---mongodb的安装</title>
@@ -19,6 +19,28 @@
            
              
               <breadCrumb title="mongodb" url="http://www.xshaohua.cc/categories/mongodb/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.xshaohua.cc/2018/04/05/NodeJS---%E4%BA%86%E8%A7%A3%E7%9A%84%E4%B8%80%E4%BA%9Blinux%E7%9F%A5%E8%AF%86/</loc>
+    <lastmod>2018-04-08T12:44:35.591Z</lastmod>
+    <data>
+        <display>
+        <title>NodeJS---了解的一些linux知识</title>
+        <pubTime>2018-04-05T07:09:37.000Z</pubTime>
+        
+        <tag>linux</tag>
+         
+        <tag>nodeJS</tag>
+         
+         
+           
+             
+              <breadCrumb title="linux" url="http://www.xshaohua.cc/categories/linux/"/>
           
         </display>
     </data>
@@ -79,28 +101,6 @@
            
              
               <breadCrumb title="nodeJS" url="http://www.xshaohua.cc/categories/nodeJS/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.xshaohua.cc/2018/04/05/NodeJS---%E4%BA%86%E8%A7%A3%E7%9A%84%E4%B8%80%E4%BA%9Blinux%E7%9F%A5%E8%AF%86/</loc>
-    <lastmod>2018-04-05T09:51:18.606Z</lastmod>
-    <data>
-        <display>
-        <title>NodeJS---了解的一些linux知识</title>
-        <pubTime>2018-04-05T07:09:37.000Z</pubTime>
-        
-        <tag>linux</tag>
-         
-        <tag>nodeJS</tag>
-         
-         
-           
-             
-              <breadCrumb title="linux" url="http://www.xshaohua.cc/categories/linux/"/>
           
         </display>
     </data>

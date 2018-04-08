@@ -94,7 +94,7 @@
 <meta property="og:site_name" content="行否">
 <meta property="og:description" content="了解的一些linux知识">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-04-05T09:51:18.606Z">
+<meta property="og:updated_time" content="2018-04-08T12:44:35.591Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="NodeJS---了解的一些linux知识">
 <meta name="twitter:description" content="了解的一些linux知识">
@@ -419,7 +419,7 @@
 <li><code>/bin</code>:可执行二进制文件的目录,如常用的命令ls、tar、mv、cat等。</li>
 <li><code>/opt</code>:给主机额外安装软件所摆放的目录。</li>
 </ol>
-<h3 id="linux的ln指令详解"><a href="#linux的ln指令详解" class="headerlink" title="linux的ln指令详解"></a><a href="https://www.cnblogs.com/kex1n/p/5193826.html" target="_blank" rel="noopener">linux的ln指令详解</a></h3><ol>
+<h3 id="linux的ln指令详解"><a href="#linux的ln指令详解" class="headerlink" title="linux的ln指令详解"></a>linux的ln指令详解</h3><ol>
 <li><p>命令功能：<br>Linux文件系统中，有所谓的链接(link)，我们可以将其视为档案的别名，而链接又可分为两种 : 硬链接(hard link)与软链接(symbolic link)。</p>
 <p>在这里我们解释一下目录项（dentry）的概念。每一个文件一般表示就是使用目录项，每个目录项包含着该文件的名字，该文件指向的inode节点标号，linux把目录和文件都用目录项表示。</p>
 <blockquote>
@@ -430,7 +430,7 @@
 <li>ln命令格式：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">ln [参数][源文件或目录][目标文件或目录]</span><br><span class="line">ln  [源文件或目录][目标文件或目录] ~~~~~~~硬链接</span><br><span class="line">ln -s [源文件或目录][目标文件或目录] ~~~~~软链接</span><br><span class="line">//创建软链接，使node和npm命令全局有效</span><br><span class="line">ln -s /root/node-v8.9.3-linux-x64/bin/node /usr/local/bin/node</span><br><span class="line">ln -s /root/node-v8.9.3-linux-x64/bin/npm /usr/local/bin/npm</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
-<h3 id="linux查看和修改PATH环境变量的方法"><a href="#linux查看和修改PATH环境变量的方法" class="headerlink" title="linux查看和修改PATH环境变量的方法"></a><a href="https://www.cnblogs.com/answercard/p/7142448.html" target="_blank" rel="noopener">linux查看和修改PATH环境变量的方法</a></h3><h4 id="添加mongodb-install-directory的路径为-var-lib-mongodb为环境变量的四种方案"><a href="#添加mongodb-install-directory的路径为-var-lib-mongodb为环境变量的四种方案" class="headerlink" title="添加mongodb-install-directory的路径为/var/lib/mongodb为环境变量的四种方案"></a>添加mongodb-install-directory的路径为/var/lib/mongodb为环境变量的四种方案</h4><p>  <code>export PATH=&lt;mongodb-install-directory&gt;/bin:$PATH</code></p>
+<h3 id="linux查看和修改PATH环境变量的方法"><a href="#linux查看和修改PATH环境变量的方法" class="headerlink" title="linux查看和修改PATH环境变量的方法"></a><a href="http://www.haorooms.com/post/linux_path_commond" target="_blank" rel="noopener">linux查看和修改PATH环境变量的方法</a></h3><h4 id="添加mongodb-install-directory的路径为-var-lib-mongodb为环境变量的四种方案"><a href="#添加mongodb-install-directory的路径为-var-lib-mongodb为环境变量的四种方案" class="headerlink" title="添加mongodb-install-directory的路径为/var/lib/mongodb为环境变量的四种方案"></a>添加mongodb-install-directory的路径为/var/lib/mongodb为环境变量的四种方案</h4><p>  <code>export PATH=&lt;mongodb-install-directory&gt;/bin:$PATH</code></p>
 <ol>
 <li>直接在终端下输入 <code>export PATH=/var/lib/mongodb/bin:$PATH</code><br>配置完后可以通过<code>echo $PATH</code>查看配置结果<br>生效方法：立即生效<br>有效期限：临时改变，只能在当前的终端窗口中有效，当前窗口关闭后就会恢复原有的path配置<br>用户局限：仅对当前用户</li>
 <li>通过修改.bashrc文件: <code>vim ~/.bashrc</code> (推荐)<br>//在最后一行添上：<br><code>export PATH=export PATH=/var/lib/mongodb/bin:$PATH</code><br>生效方法：（有以下两种）<br>1、关闭当前终端窗口，重新打开一个新终端窗口就能生效<br>2、输入<code>source ~/.bashrc</code>命令，立即生效<br>有效期限：永久有效<br>用户局限：仅对当前用户</li>
@@ -693,11 +693,7 @@
               <ul class="links-of-blogroll-list">
                 
                   <li class="links-of-blogroll-item">
-                    <a href="https://segmentfault.com/" title="segmentfault" target="_blank">segmentfault</a>
-                  </li>
-                
-                  <li class="links-of-blogroll-item">
-                    <a href="https://juejin.im/welcome/frontend" title="掘金" target="_blank">掘金</a>
+                    <a href="http://www.haorooms.com/" title="haorooms" target="_blank">haorooms</a>
                   </li>
                 
                   <li class="links-of-blogroll-item">
@@ -707,9 +703,7 @@
               </ul>
             </div>
           
-          <div class="myvideo">
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=280 height=86 src="//music.163.com/outchain/player?type=2&id=483671599&auto=0&height=66"></iframe>
-</div>
+          
 
         </div>
       </section>
