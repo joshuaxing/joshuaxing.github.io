@@ -4,6 +4,28 @@
 
     
   <url>
+    <loc>http://www.xshaohua.cc/2018/04/07/NodeJS---mongodb%E7%9A%84%E5%AE%89%E8%A3%85/</loc>
+    <lastmod>2018-04-09T16:36:57.097Z</lastmod>
+    <data>
+        <display>
+        <title>NodeJS---mongodb的安装</title>
+        <pubTime>2018-04-07T07:03:46.000Z</pubTime>
+        
+        <tag>nodeJS</tag>
+         
+        <tag>mongodb</tag>
+         
+         
+           
+             
+              <breadCrumb title="mongodb" url="http://www.xshaohua.cc/categories/mongodb/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://www.xshaohua.cc/2018/04/09/Express+Mongodb%E5%9C%A8Centos7.0%E4%B8%8B%E8%BF%90%E8%A1%8C/</loc>
     <lastmod>2018-04-09T13:02:32.592Z</lastmod>
     <data>
@@ -19,28 +41,6 @@
            
              
               <breadCrumb title="linux" url="http://www.xshaohua.cc/categories/linux/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.xshaohua.cc/2018/04/07/NodeJS---mongodb%E7%9A%84%E5%AE%89%E8%A3%85/</loc>
-    <lastmod>2018-04-09T01:35:24.876Z</lastmod>
-    <data>
-        <display>
-        <title>NodeJS---mongodb的安装</title>
-        <pubTime>2018-04-07T07:03:46.000Z</pubTime>
-        
-        <tag>nodeJS</tag>
-         
-        <tag>mongodb</tag>
-         
-         
-           
-             
-              <breadCrumb title="mongodb" url="http://www.xshaohua.cc/categories/mongodb/"/>
           
         </display>
     </data>

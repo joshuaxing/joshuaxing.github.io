@@ -94,7 +94,7 @@
 <meta property="og:site_name" content="行否">
 <meta property="og:description" content="mongodb的安装">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-04-09T01:35:24.876Z">
+<meta property="og:updated_time" content="2018-04-09T16:36:57.097Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="NodeJS---mongodb的安装">
 <meta name="twitter:description" content="mongodb的安装">
@@ -450,6 +450,23 @@
 </li>
 <li><p>参数解释</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">#是否需要验证权限登录(用户名和密码)</span><br><span class="line">--auth</span><br><span class="line">#从复制检测的时间间隔</span><br><span class="line">--slavedelay</span><br><span class="line">#指定只复制哪一个数据库</span><br><span class="line">--only </span><br><span class="line">#指定主机器的IP地址</span><br><span class="line">--master</span><br><span class="line">#指定为从机器</span><br><span class="line">--slave</span><br><span class="line">#指定主机器的IP地址</span><br><span class="line">--source </span><br><span class="line">#指定日志文件大小不超过64M.因为resync是非常操作量大且耗时，最好通过设置一个足够大的oplogSize来避免resync(默认的 oplog大小是空闲磁盘大小的5%)</span><br><span class="line">--pologSize</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><a href="https://blog.csdn.net/wlzx120/article/details/52301799" target="_blank" rel="noopener">添加管理用户</a></p>
+<ol>
+<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># use admin</span><br><span class="line"># db.createUser( &#123;user: &quot;admin&quot;,pwd: &quot;123456&quot;,roles: [ &#123; role: &quot;userAdminAnyDatabase&quot;, db: &quot;admin&quot; &#125; ]&#125;)</span><br><span class="line">注：添加完用户后可以使用show users或db.system.users.find()查看已有用户</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>添加完管理用户后，关闭MongoDB，并使用权限方式再次开启MongoDB，这里注意不要使用kill直接去杀掉mongodb进程，（如果这样做了，请去data/db目录下删除mongo.lock文件），可以使用db.shutdownServer()关闭</p>
+</li>
+<li>使用权限方式启动MongoDB<br>mongod –dbpath=/var/mongodb/data –logpath=/var/mongodb/logs/mongod.log –logappend –auth 或者修改.conf文件 auth = true</li>
+<li><p>进入mongo shell，使用admin数据库并进行验证</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># mongo</span><br><span class="line"># use admin</span><br><span class="line"># db.auth(&quot;admin&quot;,&quot;123456&quot;)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>每个数据库创建用户</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># use mydb</span><br><span class="line"># db.createUser(&#123;user: &quot;root&quot;,pwd: &quot;123456&quot;,roles: [&#123; role: &quot;readWrite&quot;, db: &quot;mydb&quot; &#125;]&#125;)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>使用创建的用户root登录进行数据库操作<br><code>mongo 127.0.0.1/mydb -uroot -p</code></p>
+</li>
+</ol>
 </li>
 <li><blockquote>
 <p>若数据库出现如不能连上，则是一个data目录下的mongod.lock文件的问题，可以用如下的修复的命令</p>
