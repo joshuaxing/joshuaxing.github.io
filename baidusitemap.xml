@@ -4,53 +4,11 @@
 
     
   <url>
-    <loc>http://www.xshaohua.cc/2018/04/10/%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E4%B9%8Blocalhost,127.0.0.1,%E6%9C%AC%E6%9C%BA%E5%9C%B0%E5%9D%80%E7%9A%84%E7%90%86%E8%A7%A3/</loc>
-    <lastmod>2018-04-10T15:48:56.266Z</lastmod>
+    <loc>http://www.xshaohua.cc/2018/04/09/Nginx/</loc>
+    <lastmod>2018-04-12T10:17:14.373Z</lastmod>
     <data>
         <display>
-        <title>网络基础知识之localhost,127.0.0.1,本机地址的理解</title>
-        <pubTime>2018-04-10T15:13:04.000Z</pubTime>
-        
-        <tag>网路基础</tag>
-         
-         
-           
-             
-              <breadCrumb title="网路基础" url="http://www.xshaohua.cc/categories/%E7%BD%91%E8%B7%AF%E5%9F%BA%E7%A1%80/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.xshaohua.cc/2018/04/07/NodeJS---mongodb%E7%9A%84%E5%AE%89%E8%A3%85/</loc>
-    <lastmod>2018-04-09T16:41:30.006Z</lastmod>
-    <data>
-        <display>
-        <title>NodeJS---mongodb的安装</title>
-        <pubTime>2018-04-07T07:03:46.000Z</pubTime>
-        
-        <tag>nodeJS</tag>
-         
-        <tag>mongodb</tag>
-         
-         
-           
-             
-              <breadCrumb title="mongodb" url="http://www.xshaohua.cc/categories/mongodb/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.xshaohua.cc/2018/04/09/Express+Mongodb%E5%9C%A8Centos7.0%E4%B8%8B%E8%BF%90%E8%A1%8C/</loc>
-    <lastmod>2018-04-09T13:02:32.592Z</lastmod>
-    <data>
-        <display>
-        <title>Express+Mongodb在Centos7.0下运行</title>
+        <title>Nginx</title>
         <pubTime>2018-04-09T06:30:31.000Z</pubTime>
         
         <tag>linux</tag>
@@ -68,11 +26,55 @@
 
     
   <url>
-    <loc>http://www.xshaohua.cc/2018/04/05/NodeJS---%E4%BA%86%E8%A7%A3%E7%9A%84%E4%B8%80%E4%BA%9Blinux%E7%9F%A5%E8%AF%86/</loc>
-    <lastmod>2018-04-08T12:44:35.591Z</lastmod>
+    <loc>http://www.xshaohua.cc/2018/04/12/pm2%E5%AE%9E%E7%94%A8%E6%8A%80%E5%B7%A7/</loc>
+    <lastmod>2018-04-12T09:59:20.246Z</lastmod>
     <data>
         <display>
-        <title>NodeJS---了解的一些linux知识</title>
+        <title>pm2实用技巧</title>
+        <pubTime>2018-04-12T02:45:14.000Z</pubTime>
+        
+        <tag>nodeJS</tag>
+         
+        <tag>pm2</tag>
+         
+         
+           
+             
+              <breadCrumb title="nodeJS" url="http://www.xshaohua.cc/categories/nodeJS/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.xshaohua.cc/2018/04/04/nodeJS%E5%9C%A8%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%8E%AF%E5%A2%83%E4%B8%BACentos7.0%E4%B8%8B%E7%9A%84%E5%AE%89%E8%A3%85/</loc>
+    <lastmod>2018-04-12T02:06:00.962Z</lastmod>
+    <data>
+        <display>
+        <title>nodeJS在服务器系统环境为Centos7.0下的安装</title>
+        <pubTime>2018-04-04T15:04:39.000Z</pubTime>
+        
+        <tag>linux</tag>
+         
+        <tag>nodeJS</tag>
+         
+         
+           
+             
+              <breadCrumb title="nodeJS" url="http://www.xshaohua.cc/categories/nodeJS/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.xshaohua.cc/2018/04/05/linux%E5%91%BD%E4%BB%A4%E7%9A%84%E4%BA%86%E8%A7%A3%EF%BC%88%E4%B8%80%EF%BC%89/</loc>
+    <lastmod>2018-04-11T07:53:09.858Z</lastmod>
+    <data>
+        <display>
+        <title>linux命令的了解（一）</title>
         <pubTime>2018-04-05T07:09:37.000Z</pubTime>
         
         <tag>linux</tag>
@@ -83,6 +85,48 @@
            
              
               <breadCrumb title="linux" url="http://www.xshaohua.cc/categories/linux/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.xshaohua.cc/2018/04/07/mongodb%E5%9C%A8%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%B3%BB%E7%BB%9F%E7%8E%AF%E5%A2%83%E4%B8%BACentos7.0%E4%B8%8B%E7%9A%84%E5%AE%89%E8%A3%85/</loc>
+    <lastmod>2018-04-11T06:08:57.777Z</lastmod>
+    <data>
+        <display>
+        <title>mongodb在服务器系统环境为Centos7.0下的安装</title>
+        <pubTime>2018-04-07T07:03:46.000Z</pubTime>
+        
+        <tag>nodeJS</tag>
+         
+        <tag>mongodb</tag>
+         
+         
+           
+             
+              <breadCrumb title="mongodb" url="http://www.xshaohua.cc/categories/mongodb/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.xshaohua.cc/2018/04/10/%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E4%B9%8Blocalhost,127.0.0.1,%E6%9C%AC%E6%9C%BA%E5%9C%B0%E5%9D%80%E7%9A%84%E7%90%86%E8%A7%A3/</loc>
+    <lastmod>2018-04-10T15:50:14.468Z</lastmod>
+    <data>
+        <display>
+        <title>网络基础知识之localhost,127.0.0.1,本机地址的理解</title>
+        <pubTime>2018-04-10T15:13:04.000Z</pubTime>
+        
+        <tag>网路基础</tag>
+         
+         
+           
+             
+              <breadCrumb title="网路基础" url="http://www.xshaohua.cc/categories/%E7%BD%91%E8%B7%AF%E5%9F%BA%E7%A1%80/"/>
           
         </display>
     </data>
@@ -123,26 +167,6 @@
            
              
               <breadCrumb title="life" url="http://www.xshaohua.cc/categories/life/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.xshaohua.cc/2018/04/04/NodeJS---%E9%83%A8%E7%BD%B2%E9%98%BF%E9%87%8C%E4%BA%91%E4%B8%8AnodeJS%E5%AE%89%E8%A3%85/</loc>
-    <lastmod>2018-04-05T09:58:43.114Z</lastmod>
-    <data>
-        <display>
-        <title>NodeJS---部署阿里云上nodeJS安装</title>
-        <pubTime>2018-04-04T15:04:39.000Z</pubTime>
-        
-        <tag>nodeJS</tag>
-         
-         
-           
-             
-              <breadCrumb title="nodeJS" url="http://www.xshaohua.cc/categories/nodeJS/"/>
           
         </display>
     </data>

@@ -75,7 +75,7 @@
 
 
 
-  <meta name="keywords" content="nodeJS,mongodb," />
+  <meta name="keywords" content="linux,nodeJS," />
 
 
 
@@ -86,18 +86,18 @@
 
 
 
-<meta name="description" content="mongodb的安装">
-<meta name="keywords" content="nodeJS,mongodb">
+<meta name="description" content="在nodeJS部署服务器线上环境的过程中，学习和了解到的一些知识点的小结">
+<meta name="keywords" content="linux,nodeJS">
 <meta property="og:type" content="article">
-<meta property="og:title" content="NodeJS---mongodb的安装">
-<meta property="og:url" content="http://www.xshaohua.cc/2018/04/07/NodeJS---mongodb的安装/index.html">
+<meta property="og:title" content="linux命令的了解（一）">
+<meta property="og:url" content="http://www.xshaohua.cc/2018/04/05/linux命令的了解（一）/index.html">
 <meta property="og:site_name" content="行否">
-<meta property="og:description" content="mongodb的安装">
+<meta property="og:description" content="在nodeJS部署服务器线上环境的过程中，学习和了解到的一些知识点的小结">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-04-09T16:41:30.006Z">
+<meta property="og:updated_time" content="2018-04-11T07:53:09.858Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="NodeJS---mongodb的安装">
-<meta name="twitter:description" content="mongodb的安装">
+<meta name="twitter:title" content="linux命令的了解（一）">
+<meta name="twitter:description" content="在nodeJS部署服务器线上环境的过程中，学习和了解到的一些知识点的小结">
 
 
 
@@ -127,12 +127,12 @@
 
 
 
-  <link rel="canonical" href="http://www.xshaohua.cc/2018/04/07/NodeJS---mongodb的安装/"/>
+  <link rel="canonical" href="http://www.xshaohua.cc/2018/04/05/linux命令的了解（一）/"/>
 
 
 
 
-  <title>NodeJS---mongodb的安装 | 行否</title>
+  <title>linux命令的了解（一） | 行否</title>
   
 
 
@@ -305,7 +305,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.xshaohua.cc/2018/04/07/NodeJS---mongodb的安装/">
+    <link itemprop="mainEntityOfPage" href="http://www.xshaohua.cc/2018/04/05/linux命令的了解（一）/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="行程">
@@ -322,7 +322,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">NodeJS---mongodb的安装</h2>
+          <h2 class="post-title" itemprop="name headline">linux命令的了解（一）</h2>
         
 
         <div class="post-meta">
@@ -334,8 +334,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-07T15:03:46+08:00">
-                2018-04-07
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-05T15:09:37+08:00">
+                2018-04-05
               </time>
             
 
@@ -357,8 +357,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/mongodb/" itemprop="url" rel="index">
-                    <span itemprop="name">mongodb</span>
+                  <a href="/categories/linux/" itemprop="url" rel="index">
+                    <span itemprop="name">linux</span>
                   </a>
                 </span>
 
@@ -388,7 +388,7 @@
 
           
               <div class="post-description">
-                  mongodb的安装
+                  在nodeJS部署服务器线上环境的过程中，学习和了解到的一些知识点的小结
               </div>
           
 
@@ -405,100 +405,58 @@
       
 
       
-        <h3 id="Linux下安装MongoDB的实现步骤"><a href="#Linux下安装MongoDB的实现步骤" class="headerlink" title="Linux下安装MongoDB的实现步骤"></a>Linux下安装MongoDB的实现步骤</h3><h4 id="安装配置mongodb"><a href="#安装配置mongodb" class="headerlink" title="安装配置mongodb"></a>安装配置mongodb</h4><blockquote>
-<p><code>/opt/mongodb/</code>  mongodb安装位置<br>  <code>/opt/mongodb/bin</code>  mongodb命令目录<br>  <code>/var/mongodb/data</code> 数据存放目录<br>  <code>/var/mongodb/logs/mongod.log</code> 日志存放目录及文件<br>  <code>/var/mongodb/mongodb.conf</code> mongodb启动配置文件</p>
+        <h3 id="centOS目录结构"><a href="#centOS目录结构" class="headerlink" title="centOS目录结构"></a><a href="https://www.aliyun.com/jiaocheng/162547.html" target="_blank" rel="noopener">centOS目录结构</a></h3><ol>
+<li><code>/</code>: 根目录,一般根目录下只存放目录,不要存放文件,/etc、/bin、/dev、/lib、/sbin应该和根目录放置在一个分区中。</li>
+<li><code>/root</code>: 系统管理员root的家目录,系统第一个启动的分区为/,所以最好将/root和/放置在一个分区下。</li>
+<li><code>/usr</code>: 应用程序存放目录。<blockquote>
+<p><code>/usr/bin</code>存放应用程序,可执行二进制文件的目录和/bin相似<br><code>/usr/share</code>存放共享数据<br><code>/usr/lib</code>存放不能直接运行的,却是许多程序运行所必需的一些函数库文件<br><code>/usr/local</code>存放软件升级包<br><code>/usr/share/doc</code>系统说明文件存放目录</p>
 </blockquote>
-<ol>
-<li>wget命令下载Node.js安装包<br><code>wget https://fastdl.mongodb.org/linux/mongodb-linux-x86_64-3.4.5.tgz</code></li>
-<li><p>解压文件,并移动mongodb安装包</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">tar zxvf mongodb-linux-x86_64-3.4.5.tgz</span><br><span class="line">mv /root/mongodb-linux-x86_64-3.4.5/* /opt/mongodb/</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>创建数据和日志存放目录</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">mkdir /var/mongodb</span><br><span class="line">mkdir /var/mongodb/data</span><br><span class="line">mkdir /var/mongodb/logs</span><br><span class="line">touch /var/mongodb/logs/mongod.log</span><br><span class="line">touch /var/mongodb/mongodb.conf</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>打开rc.local文件，添加CentOS开机启动项,让mongodb开机自启动</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># vim /etc/rc.d/rc.local</span><br><span class="line">/opt/mongodb/bin/mongod --dbpath=/var/mongodb/data --logpath=/var/mongodb/logs/mongod.log --fork --logappend</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>设置mongodb命令的环境变量</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">#vi ~/.bash_profile //进入编辑</span><br><span class="line">export PATH=/opt/mongodb/bin:$PATH //文件添加内容</span><br><span class="line">#source ~/.bash_profile //文件生成</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<h4 id="mongodb的启动"><a href="#mongodb的启动" class="headerlink" title="mongodb的启动"></a>mongodb的启动</h4><blockquote>
-<p>mongodb启动时，如果没有设置环境变量，则用./mongod</p>
+<li><code>/var</code>: 放置系统执行过程中经常变化的文件。<blockquote>
+<p><code>/var/log</code>随时更改的日志文件<br><code>/var/log/message</code>所有的登录文件存放目录<br><code>/var/spool/mail</code>邮件存放的目录<br><code>/var/run</code>程序或服务启动</p>
 </blockquote>
-<ol>
-<li><p>参数启动</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd /opt/mongodb/bin</span><br><span class="line">mongod --dbpath=/var/mongodb/data --logpath= /var/mongodb/logs/mongod.log --logappend</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>使用配置文件启动（/var/mongodb/mongodb.conf）<br>配置文件</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">#启用日志文件，默认启用</span><br><span class="line">journal = true</span><br><span class="line">#这个选项可以过滤掉一些无用的日志信息，若需要调试使用请设置为false</span><br><span class="line">quiet = false</span><br><span class="line">#日志文件位置</span><br><span class="line">logpath=/var/mongodb/logs/mongod.log</span><br><span class="line">#以追加方式写入日志</span><br><span class="line">logappend=true</span><br><span class="line">#是否以守护进程方式运行</span><br><span class="line">fork = false</span><br><span class="line">#默认27017</span><br><span class="line">port = 27017</span><br><span class="line"># 数据库文件位置</span><br><span class="line">dbpath = /var/mongodb/data/</span><br><span class="line">#启用定期记录CPU利用率和 I/O 等待</span><br><span class="line">cpu = true</span><br></pre></td></tr></table></figure>
-<p>启动</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd /opt/mongodb/bin</span><br><span class="line">mongod --config /var/mongodb/mongodb.conf</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><a href="https://blog.csdn.net/wlzx120/article/details/52311769" target="_blank" rel="noopener">系统服务启动</a><br><a href="https://blog.csdn.net/a123demi/article/details/70238972" target="_blank" rel="noopener">参考</a></p>
-</li>
-<li><p>配置防火墙开放端口27017</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># vi /etc/sysconfig/iptables </span><br><span class="line">-A INPUT -m state --state NEW -m tcp -p tcp --dport 27017 -j ACCEPT  </span><br><span class="line">#  service iptables restart</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>检查端口是否已被启动</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">netstat -pan | grep 27017</span><br><span class="line">或</span><br><span class="line">netstat -nputl</span><br></pre></td></tr></table></figure>
-<p><code>netstat</code>: 打印Linux中网络系统的状态信息<br><code>-n(numeric)</code>: 直接使用ip地址<br><code>-p(programs)</code>: 显示正在使用Socket的程序识别码和程序名称<br><code>-u(udp)</code>: 显示UDP传输协议的连线状况<br><code>-t(tcp)</code>: 显示TCP传输协议的连线状况<br><code>-l(listening)</code>: 显示监控中的服务器的Socket<br><code>-a(all)</code>:显示所有连线中的Socket<br><code>grep</code>: 强大的文本搜索工具，它能使用正则表达式搜索文本，并把匹配的行打印出来。</p>
-</li>
-<li>查看mongodb进程<br><code>ps aux | grep mongodb</code><br><code>ps</code>: 用于报告当前系统的进程状态<br><code>a</code>: 显示现行终端机下的所有程序，包括其他用户的程序<br><code>u</code>: 以用户为主的格式来显示程序状况<br><code>x</code>: 显示所有程序，不以终端机来区分</li>
-<li><p>关闭mongodb服务</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">use admin</span><br><span class="line">db.shutdownServer()</span><br><span class="line">//强制关闭Mongod</span><br><span class="line">db.shutdownServer(&#123;force : true&#125;) </span><br><span class="line">或</span><br><span class="line">db.adminCommand(&#123;shutdown : 1, force : true&#125;)</span><br><span class="line">//超时关闭</span><br><span class="line">db.adminCommand(shutdown : 1, force : true, timeoutsec : 5)</span><br><span class="line">或</span><br><span class="line">db.shutdownServer(&#123;force : true, timeoutsec : 5&#125;)</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>参数解释</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">#是否需要验证权限登录(用户名和密码)</span><br><span class="line">--auth</span><br><span class="line">#从复制检测的时间间隔</span><br><span class="line">--slavedelay</span><br><span class="line">#指定只复制哪一个数据库</span><br><span class="line">--only </span><br><span class="line">#指定主机器的IP地址</span><br><span class="line">--master</span><br><span class="line">#指定为从机器</span><br><span class="line">--slave</span><br><span class="line">#指定主机器的IP地址</span><br><span class="line">--source </span><br><span class="line">#指定日志文件大小不超过64M.因为resync是非常操作量大且耗时，最好通过设置一个足够大的oplogSize来避免resync(默认的 oplog大小是空闲磁盘大小的5%)</span><br><span class="line">--pologSize</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><a href="https://blog.csdn.net/wlzx120/article/details/52301799" target="_blank" rel="noopener">数据库添加用户验证</a></p>
-<ol>
-<li><p>添加管理用户</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># use admin</span><br><span class="line"># db.createUser( &#123;user: &quot;admin&quot;,pwd: &quot;123456&quot;,roles: [ &#123; role: &quot;userAdminAnyDatabase&quot;, db: &quot;admin&quot; &#125; ]&#125;)</span><br><span class="line">注：添加完用户后可以使用show users或db.system.users.find()查看已有用户</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>添加完管理用户后，关闭MongoDB，并使用权限方式再次开启MongoDB，这里注意不要使用kill直接去杀掉mongodb进程，（如果这样做了，请去data/db目录下删除mongo.lock文件），可以使用db.shutdownServer()关闭</p>
-</li>
-<li>使用权限方式启动MongoDB<br>mongod –dbpath=/var/mongodb/data –logpath=/var/mongodb/logs/mongod.log –logappend –auth 或者修改.conf文件 auth = true</li>
-<li><p>进入mongo shell，使用admin数据库并进行验证</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># mongo</span><br><span class="line"># use admin</span><br><span class="line"># db.auth(&quot;admin&quot;,&quot;123456&quot;)</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>每个数据库创建用户</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># use mydb</span><br><span class="line"># db.createUser(&#123;user: &quot;root&quot;,pwd: &quot;123456&quot;,roles: [&#123; role: &quot;readWrite&quot;, db: &quot;mydb&quot; &#125;]&#125;)</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>使用创建的用户root登录进行数据库操作<br><code>mongo 127.0.0.1/mydb -uroot -p</code></p>
-</li>
+<li><code>/bin</code>:可执行二进制文件的目录,如常用的命令ls、tar、mv、cat等。</li>
+<li><code>/opt</code>:给主机额外安装软件所摆放的目录。</li>
 </ol>
-</li>
-<li><blockquote>
-<p>若数据库出现如不能连上，则是一个data目录下的mongod.lock文件的问题，可以用如下的修复的命令</p>
+<h3 id="linux的ln指令详解"><a href="#linux的ln指令详解" class="headerlink" title="linux的ln指令详解"></a>linux的ln指令详解</h3><ol>
+<li><p>命令功能：<br>Linux文件系统中，有所谓的链接(link)，我们可以将其视为档案的别名，而链接又可分为两种 : 硬链接(hard link)与软链接(symbolic link)。</p>
+<p>在这里我们解释一下目录项（dentry）的概念。每一个文件一般表示就是使用目录项，每个目录项包含着该文件的名字，该文件指向的inode节点标号，linux把目录和文件都用目录项表示。</p>
+<blockquote>
+<p><code>硬链接</code>：硬链接可以认为是一个指针，指向原文件inode的指针，系统不为它重新分配inode和创建文件，即硬链接和原文件是同一个文件。其新建一个目录项，指向被链接的inode节点，一个inode节点可以指向多个目录项。<br><code>软链接</code>：它是指向另一个文件的特殊文件，这种文件的数据部分仅仅包含了它所要连接文件的路径名。软链接同样也是新建一个目录项，指向一个新的inode节点，但这个inode节点的文件数据指针指向所引用文件的真实地址。</p>
 </blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mongod --repair</span><br><span class="line">或</span><br><span class="line">rm -f /var/mongodb/data/db/mongod.lock</span><br></pre></td></tr></table></figure>
+<p>注意点：ln命令会保持每一处链接文件的同步性，硬链接会在你选定的位置上生成一个和源文件大小相同的文件，软链接只会在你选定的位置上生成一个文件的镜像，不会占用磁盘空间。</p>
+</li>
+<li>ln命令格式：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">ln [参数][源文件或目录][目标文件或目录]</span><br><span class="line">ln  [源文件或目录][目标文件或目录] ~~~~~~~硬链接</span><br><span class="line">ln -s [源文件或目录][目标文件或目录] ~~~~~软链接</span><br><span class="line">//创建软链接，使node和npm命令全局有效</span><br><span class="line">ln -s /root/node-v8.9.3-linux-x64/bin/node /usr/local/bin/node</span><br><span class="line">ln -s /root/node-v8.9.3-linux-x64/bin/npm /usr/local/bin/npm</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
-<h4 id="本地数据导入服务器数据库"><a href="#本地数据导入服务器数据库" class="headerlink" title="本地数据导入服务器数据库"></a>本地数据导入服务器数据库</h4><p>思路:</p>
+<h3 id="linux查看和修改PATH环境变量的方法"><a href="#linux查看和修改PATH环境变量的方法" class="headerlink" title="linux查看和修改PATH环境变量的方法"></a><a href="http://www.haorooms.com/post/linux_path_commond" target="_blank" rel="noopener">linux查看和修改PATH环境变量的方法</a></h3><h4 id="添加mongodb-install-directory的路径为-var-lib-mongodb为环境变量的四种方案"><a href="#添加mongodb-install-directory的路径为-var-lib-mongodb为环境变量的四种方案" class="headerlink" title="添加mongodb-install-directory的路径为/var/lib/mongodb为环境变量的四种方案"></a>添加mongodb-install-directory的路径为/var/lib/mongodb为环境变量的四种方案</h4><p>  <code>export PATH=&lt;mongodb-install-directory&gt;/bin:$PATH</code></p>
 <ol>
-<li>将本地的数据库collection导出生成数据文件（json, txt,wps,xls）</li>
-<li>把生成的数据文件上传到服务器上</li>
-<li>然后在服务器上把数据文件导入服务器数据库</li>
+<li>直接在终端下输入 <code>export PATH=/var/lib/mongodb/bin:$PATH</code><br>配置完后可以通过<code>echo $PATH</code>查看配置结果<br>生效方法：立即生效<br>有效期限：临时改变，只能在当前的终端窗口中有效，当前窗口关闭后就会恢复原有的path配置<br>用户局限：仅对当前用户</li>
+<li>通过修改.bashrc文件: <code>vim ~/.bashrc</code> (推荐)<br>//在最后一行添上：<br><code>export PATH=export PATH=/var/lib/mongodb/bin:$PATH</code><br>生效方法：（有以下两种）<br>1、关闭当前终端窗口，重新打开一个新终端窗口就能生效<br>2、输入<code>source ~/.bashrc</code>命令，立即生效<br>有效期限：永久有效<br>用户局限：仅对当前用户</li>
+<li>通过修改profile文件: <code>vim /etc/profile</code><br>export PATH 找到设置PATH的行，添加<br><code>export PATH=export PATH=/var/lib/mongodb/bin:$PATH</code><br>生效方法：系统重启<br>有效期限：永久有效<br>用户局限：对所有用户</li>
+<li><p>通过修改environment文件: <code>vim /etc/environment</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">PATH=&quot;/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin&quot;中加入&quot;:/usr/local/mongodb/bin&quot;</span><br></pre></td></tr></table></figure>
+<p>生效方法：系统重启<br>有效期限：永久有效<br>用户局限：对所有用户</p>
+</li>
 </ol>
-<p>实例:</p>
+<h4 id="环境变量的查看与删除"><a href="#环境变量的查看与删除" class="headerlink" title="环境变量的查看与删除"></a>环境变量的查看与删除</h4><blockquote>
+<p><code>echo $PATH</code>: 查看单个环境变量<br>   <code>env</code>: 查看所有环境变量<br>   <code>set</code>: 查看所有本地定义的环境变量<br>   <code>unset $变量名</code>: 可以删除指定的环境变量</p>
+</blockquote>
+<h4 id="常用的环境变量"><a href="#常用的环境变量" class="headerlink" title="常用的环境变量"></a>常用的环境变量</h4><blockquote>
+<p><code>PATH</code> 决定了shell将到哪些目录中寻找命令或程序<br>  <code>HOME</code>当前用户主目录<br>  <code>HISTSIZE</code>　历史记录数<br>  <code>LOGNAME</code> 当前用户的登录名<br>  <code>HOSTNAME</code>　指主机的名称<br>  <code>SHELL</code> 当前用户Shell类型<br>  <code>LANGUGE</code> 　语言相关的环境变量，多语言可以修改此环境变量<br>  <code>MAIL</code>　当前用户的邮件存放目录<br>  <code>PS1</code>　基本提示符，对于root用户是#，对于普通用户是$</p>
+</blockquote>
+<h3 id="ps命令的详细使用方法"><a href="#ps命令的详细使用方法" class="headerlink" title="ps命令的详细使用方法"></a><a href="http://www.jb51.net/LINUXjishu/151851.html" target="_blank" rel="noopener">ps命令的详细使用方法</a></h3><h3 id="linux命令"><a href="#linux命令" class="headerlink" title="linux命令"></a><a href="http://man.linuxde.net/sub/%E7%9B%AE%E5%BD%95%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C" target="_blank" rel="noopener">linux命令</a></h3><h3 id="虚拟机VMware环境为CentOs7-0的本地安装"><a href="#虚拟机VMware环境为CentOs7-0的本地安装" class="headerlink" title="虚拟机VMware环境为CentOs7.0的本地安装"></a>虚拟机VMware环境为CentOs7.0的本地安装</h3><p><a href="http://www.cnblogs.com/lynn-li/p/6077944.html" target="_blank" rel="noopener">参考</a></p>
 <ol>
-<li><p>本地导出ztNet数据库的news集合生成news.json,文件生成目录在:/pc_node/mongoexport/</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ctrl+r -&gt; cmd -&gt; cd D:/mongo/bin //本地的mongodb安装目录</span><br><span class="line">mongoexport -h localhost:27018 -d ztNet -c news -o E:/pc_node/mongoexport/news.json --type json</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>把news.json上传到服务器目录/testNode/express_test/mongoexport/下</p>
-</li>
-<li><p>然后把服务器上news.json文件导入test数据库生成集合news</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd /opt/mongodb/bin //服务器上mongodb的安装目录</span><br><span class="line">mongoimport -h 0.0.0.0:27017 -d test -c news --file /testNode/express_test/mongoexport/news.json --type json</span><br></pre></td></tr></table></figure>
-<p><code>-h</code>: 数据库地址<br><code>-d</code>: 指明使用的数据库,如果想导出所有数据库，可以去掉-d<br><code>-c</code>: 指明要导出的集合<br><code>-o</code>: 数据文件输出的位置和文件名<br><code>--type</code>:输出的格式，默认为json<br><code>-u</code>: 用户<br><code>-p</code>:密码<br><code>--port</code>: 默认端口<br><code>-f</code> :输出的字段，如果-type为csv，则需要加上-f “字段名”<br><code>file</code>: 要导入的文件<br><code>--headerline</code>: 如果导入的格式是csv，则可以使用第一行的标题作为导入的字段</p>
-</li>
+<li>服务器安装配置了解知识<br><code>yum</code>:是在Fedora和RedHat以及SUSE中基于rpm的软件包管理器<br><code>yum install</code>: 安装rpm软件包<br><code>yum remove</code>: 删除指定的rpm软件包<br><code>yum list</code>: 显示软件包的信息<br><code>yum search</code>: 检查软件包的信息</li>
+<li>安装ifconfig命令<br><code>yum install net-tools.x86_64</code></li>
+<li>安装包命令<br><code>yum install XXX</code></li>
 </ol>
-<h4 id="MongoDB备份与恢复"><a href="#MongoDB备份与恢复" class="headerlink" title="MongoDB备份与恢复"></a>MongoDB备份与恢复</h4><ol>
-<li>MongoDB数据库备份<br>语法： mongodump -h dbhost -d dbname -o dbdirectory<br><code>-h</code>: MongDB所在服务器地址，例如：127.0.0.1，当然也可以指定端口号：127.0.0.1:27017<br><code>-d</code>: 需要备份的数据库数据库<br><code>-o</code>:  备份的数据存放位置<br><code>mongodump -h 0.0.0.0:27017 -d test -o /var/mongodb/copydata/</code></li>
-<li>MongoDB数据库恢复<br>语法： mongorestore -h dbhost -d dbname –dir dbdirectory<br><code>--dir</code>: 备份数据所在位置<br><code>--drop</code>: 恢复的时候，先删除当前数据，然后恢复备份的数据。恢复后，备份后添加修改的数据都会被删除，慎用！<br><code>mongorestore -h 0.0.0.0:27017 -d test --dir /var/mongodb/copydata/</code></li>
+<h3 id="虚拟机VMware环境为ubuntu的本地安装"><a href="#虚拟机VMware环境为ubuntu的本地安装" class="headerlink" title="虚拟机VMware环境为ubuntu的本地安装"></a>虚拟机VMware环境为ubuntu的本地安装</h3><p><a href="https://blog.csdn.net/joe51392010/article/details/75042266" target="_blank" rel="noopener">参考</a></p>
+<ol>
+<li>安装包<br><code># apt-get update</code><br><code># apt-get install build-essential libssl-dev</code></li>
 </ol>
-<h4 id="MongoDB的基本命令"><a href="#MongoDB的基本命令" class="headerlink" title="MongoDB的基本命令"></a>MongoDB的基本命令</h4><p>  <code>show dbs</code>: 显示数据库列表<br>  <code>show collections</code>: 显示当前数据库中的集合（类似关系数据库中的表）<br>  <code>db.dropDatabase()</code>: 删除当前使用数据库<br>  <code>db.cloneDatabase(“127.0.0.1”)</code>:将指定机器上的数据库的数据克隆到当前数据库<br>  <code>db.repairDatabase()</code> :修复当前数据库<br>  <code>db.copyDatabase(&quot;mydb&quot;, &quot;temp&quot;, &quot;127.0.0.1&quot;)</code>: 将本机的mydb的数据复制到temp数据库中<br>  <code>db.getName()</code>:查看当前使用的数据库<br>  <code>db.stats()</code>:显示当前db状态<br>  <code>db.getMongo()</code>:查看当前db的链接机器地址<br>  <code>show users</code>:显示用户<br>  <code>db.removeUser(&quot;userName&quot;)</code>: 删除用户<br>  <code>db.auth(&quot;userName&quot;, &quot;123123&quot;)</code>: 数据库认证、安全模式<br>  <code>db.addUser(&quot;name&quot;);</code>:添加一个用户</p>
-<h4 id="MongoDB运行日志自动分割"><a href="#MongoDB运行日志自动分割" class="headerlink" title="MongoDB运行日志自动分割"></a><a href="https://blog.csdn.net/wangkai_123456/article/details/53705592" target="_blank" rel="noopener">MongoDB运行日志自动分割</a></h4><h3 id="windows下MongoDB的安装及配置"><a href="#windows下MongoDB的安装及配置" class="headerlink" title="windows下MongoDB的安装及配置"></a><a href="https://jingyan.baidu.com/article/d5c4b52bef7268da560dc5f8.html" target="_blank" rel="noopener">windows下MongoDB的安装及配置</a></h3>
+
       
     </div>
     
@@ -547,7 +505,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://xshaohua.cc/2018/04/07/NodeJS---mongodb的安装/" title="NodeJS---mongodb的安装">http://xshaohua.cc/2018/04/07/NodeJS---mongodb的安装/</a>
+    <a href="http://xshaohua.cc/2018/04/05/linux命令的了解（一）" title="linux命令的了解（一）">http://xshaohua.cc/2018/04/05/linux命令的了解（一）</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -563,9 +521,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/nodeJS/" rel="tag"><i class="fa fa-tag"></i> nodeJS</a>
+            <a href="/tags/linux/" rel="tag"><i class="fa fa-tag"></i> linux</a>
           
-            <a href="/tags/mongodb/" rel="tag"><i class="fa fa-tag"></i> mongodb</a>
+            <a href="/tags/nodeJS/" rel="tag"><i class="fa fa-tag"></i> nodeJS</a>
           
         </div>
       
@@ -578,8 +536,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/04/06/网络基础知识之 HTTP 协议/" rel="next" title="网络基础知识之 HTTP 协议">
-                <i class="fa fa-chevron-left"></i> 网络基础知识之 HTTP 协议
+              <a href="/2018/04/04/nodeJS在服务器环境为Centos7.0下的安装/" rel="next" title="nodeJS在服务器系统环境为Centos7.0下的安装">
+                <i class="fa fa-chevron-left"></i> nodeJS在服务器系统环境为Centos7.0下的安装
               </a>
             
           </div>
@@ -588,8 +546,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/04/09/Express+Mongodb在Centos7.0下运行/" rel="prev" title="Express+Mongodb在Centos7.0下运行">
-                Express+Mongodb在Centos7.0下运行 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/04/06/网络基础知识之 HTTP 协议/" rel="prev" title="网络基础知识之 HTTP 协议">
+                网络基础知识之 HTTP 协议 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -676,7 +634,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-count">9</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -698,7 +656,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -770,7 +728,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Linux下安装MongoDB的实现步骤"><span class="nav-number">1.</span> <span class="nav-text">Linux下安装MongoDB的实现步骤</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#安装配置mongodb"><span class="nav-number">1.1.</span> <span class="nav-text">安装配置mongodb</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#mongodb的启动"><span class="nav-number">1.2.</span> <span class="nav-text">mongodb的启动</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#本地数据导入服务器数据库"><span class="nav-number">1.3.</span> <span class="nav-text">本地数据导入服务器数据库</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#MongoDB备份与恢复"><span class="nav-number">1.4.</span> <span class="nav-text">MongoDB备份与恢复</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#MongoDB的基本命令"><span class="nav-number">1.5.</span> <span class="nav-text">MongoDB的基本命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#MongoDB运行日志自动分割"><span class="nav-number">1.6.</span> <span class="nav-text">MongoDB运行日志自动分割</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#windows下MongoDB的安装及配置"><span class="nav-number">2.</span> <span class="nav-text">windows下MongoDB的安装及配置</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#centOS目录结构"><span class="nav-number">1.</span> <span class="nav-text">centOS目录结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#linux的ln指令详解"><span class="nav-number">2.</span> <span class="nav-text">linux的ln指令详解</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#linux查看和修改PATH环境变量的方法"><span class="nav-number">3.</span> <span class="nav-text">linux查看和修改PATH环境变量的方法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#添加mongodb-install-directory的路径为-var-lib-mongodb为环境变量的四种方案"><span class="nav-number">3.1.</span> <span class="nav-text">添加mongodb-install-directory的路径为/var/lib/mongodb为环境变量的四种方案</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#环境变量的查看与删除"><span class="nav-number">3.2.</span> <span class="nav-text">环境变量的查看与删除</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#常用的环境变量"><span class="nav-number">3.3.</span> <span class="nav-text">常用的环境变量</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ps命令的详细使用方法"><span class="nav-number">4.</span> <span class="nav-text">ps命令的详细使用方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#linux命令"><span class="nav-number">5.</span> <span class="nav-text">linux命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#虚拟机VMware环境为CentOs7-0的本地安装"><span class="nav-number">6.</span> <span class="nav-text">虚拟机VMware环境为CentOs7.0的本地安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#虚拟机VMware环境为ubuntu的本地安装"><span class="nav-number">7.</span> <span class="nav-text">虚拟机VMware环境为ubuntu的本地安装</span></a></li></ol></div>
             
 
           </div>

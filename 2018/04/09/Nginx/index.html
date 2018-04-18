@@ -86,18 +86,18 @@
 
 
 
-<meta name="description" content="了解的一些linux知识">
+<meta name="description" content="Nginx">
 <meta name="keywords" content="linux,nodeJS">
 <meta property="og:type" content="article">
-<meta property="og:title" content="NodeJS---了解的一些linux知识">
-<meta property="og:url" content="http://www.xshaohua.cc/2018/04/05/NodeJS---了解的一些linux知识/index.html">
+<meta property="og:title" content="Nginx">
+<meta property="og:url" content="http://www.xshaohua.cc/2018/04/09/Nginx/index.html">
 <meta property="og:site_name" content="行否">
-<meta property="og:description" content="了解的一些linux知识">
+<meta property="og:description" content="Nginx">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-04-08T12:44:35.591Z">
+<meta property="og:updated_time" content="2018-04-12T10:17:14.373Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="NodeJS---了解的一些linux知识">
-<meta name="twitter:description" content="了解的一些linux知识">
+<meta name="twitter:title" content="Nginx">
+<meta name="twitter:description" content="Nginx">
 
 
 
@@ -127,12 +127,12 @@
 
 
 
-  <link rel="canonical" href="http://www.xshaohua.cc/2018/04/05/NodeJS---了解的一些linux知识/"/>
+  <link rel="canonical" href="http://www.xshaohua.cc/2018/04/09/Nginx/"/>
 
 
 
 
-  <title>NodeJS---了解的一些linux知识 | 行否</title>
+  <title>Nginx | 行否</title>
   
 
 
@@ -305,7 +305,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.xshaohua.cc/2018/04/05/NodeJS---了解的一些linux知识/">
+    <link itemprop="mainEntityOfPage" href="http://www.xshaohua.cc/2018/04/09/Nginx/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="行程">
@@ -322,7 +322,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">NodeJS---了解的一些linux知识</h2>
+          <h2 class="post-title" itemprop="name headline">Nginx</h2>
         
 
         <div class="post-meta">
@@ -334,8 +334,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-05T15:09:37+08:00">
-                2018-04-05
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-09T14:30:31+08:00">
+                2018-04-09
               </time>
             
 
@@ -388,7 +388,7 @@
 
           
               <div class="post-description">
-                  了解的一些linux知识
+                  Nginx
               </div>
           
 
@@ -405,48 +405,38 @@
       
 
       
-        <h3 id="centOS目录结构"><a href="#centOS目录结构" class="headerlink" title="centOS目录结构"></a><a href="https://www.aliyun.com/jiaocheng/162547.html" target="_blank" rel="noopener">centOS目录结构</a></h3><ol>
-<li><code>/</code>: 根目录,一般根目录下只存放目录,不要存放文件,/etc、/bin、/dev、/lib、/sbin应该和根目录放置在一个分区中。</li>
-<li><code>/root</code>: 系统管理员root的家目录,系统第一个启动的分区为/,所以最好将/root和/放置在一个分区下。</li>
-<li><code>/usr</code>: 应用程序存放目录。<blockquote>
-<p><code>/usr/bin</code>存放应用程序,可执行二进制文件的目录和/bin相似<br><code>/usr/share</code>存放共享数据<br><code>/usr/lib</code>存放不能直接运行的,却是许多程序运行所必需的一些函数库文件<br><code>/usr/local</code>存放软件升级包<br><code>/usr/share/doc</code>系统说明文件存放目录</p>
-</blockquote>
-</li>
-<li><code>/var</code>: 放置系统执行过程中经常变化的文件。<blockquote>
-<p><code>/var/log</code>随时更改的日志文件<br><code>/var/log/message</code>所有的登录文件存放目录<br><code>/var/spool/mail</code>邮件存放的目录<br><code>/var/run</code>程序或服务启动</p>
-</blockquote>
-</li>
-<li><code>/bin</code>:可执行二进制文件的目录,如常用的命令ls、tar、mv、cat等。</li>
-<li><code>/opt</code>:给主机额外安装软件所摆放的目录。</li>
+        <h3 id="Nginx优点"><a href="#Nginx优点" class="headerlink" title="Nginx优点"></a>Nginx优点</h3><ol>
+<li>高并发、部署简单、内存消耗少、成本底<h3 id="Nginx安装"><a href="#Nginx安装" class="headerlink" title="Nginx安装"></a>Nginx安装</h3><ol>
+<li>安装依赖<br><code>yum -y install gcc zlib zlib-devel pcre-devel openssl openssl-devel</code></li>
 </ol>
-<h3 id="linux的ln指令详解"><a href="#linux的ln指令详解" class="headerlink" title="linux的ln指令详解"></a>linux的ln指令详解</h3><ol>
-<li><p>命令功能：<br>Linux文件系统中，有所谓的链接(link)，我们可以将其视为档案的别名，而链接又可分为两种 : 硬链接(hard link)与软链接(symbolic link)。</p>
-<p>在这里我们解释一下目录项（dentry）的概念。每一个文件一般表示就是使用目录项，每个目录项包含着该文件的名字，该文件指向的inode节点标号，linux把目录和文件都用目录项表示。</p>
-<blockquote>
-<p><code>硬链接</code>：硬链接可以认为是一个指针，指向原文件inode的指针，系统不为它重新分配inode和创建文件，即硬链接和原文件是同一个文件。其新建一个目录项，指向被链接的inode节点，一个inode节点可以指向多个目录项。<br><code>软链接</code>：它是指向另一个文件的特殊文件，这种文件的数据部分仅仅包含了它所要连接文件的路径名。软链接同样也是新建一个目录项，指向一个新的inode节点，但这个inode节点的文件数据指针指向所引用文件的真实地址。</p>
-</blockquote>
-<p>注意点：ln命令会保持每一处链接文件的同步性，硬链接会在你选定的位置上生成一个和源文件大小相同的文件，软链接只会在你选定的位置上生成一个文件的镜像，不会占用磁盘空间。</p>
-</li>
-<li>ln命令格式：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">ln [参数][源文件或目录][目标文件或目录]</span><br><span class="line">ln  [源文件或目录][目标文件或目录] ~~~~~~~硬链接</span><br><span class="line">ln -s [源文件或目录][目标文件或目录] ~~~~~软链接</span><br><span class="line">//创建软链接，使node和npm命令全局有效</span><br><span class="line">ln -s /root/node-v8.9.3-linux-x64/bin/node /usr/local/bin/node</span><br><span class="line">ln -s /root/node-v8.9.3-linux-x64/bin/npm /usr/local/bin/npm</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
-<h3 id="linux查看和修改PATH环境变量的方法"><a href="#linux查看和修改PATH环境变量的方法" class="headerlink" title="linux查看和修改PATH环境变量的方法"></a><a href="http://www.haorooms.com/post/linux_path_commond" target="_blank" rel="noopener">linux查看和修改PATH环境变量的方法</a></h3><h4 id="添加mongodb-install-directory的路径为-var-lib-mongodb为环境变量的四种方案"><a href="#添加mongodb-install-directory的路径为-var-lib-mongodb为环境变量的四种方案" class="headerlink" title="添加mongodb-install-directory的路径为/var/lib/mongodb为环境变量的四种方案"></a>添加mongodb-install-directory的路径为/var/lib/mongodb为环境变量的四种方案</h4><p>  <code>export PATH=&lt;mongodb-install-directory&gt;/bin:$PATH</code></p>
-<ol>
-<li>直接在终端下输入 <code>export PATH=/var/lib/mongodb/bin:$PATH</code><br>配置完后可以通过<code>echo $PATH</code>查看配置结果<br>生效方法：立即生效<br>有效期限：临时改变，只能在当前的终端窗口中有效，当前窗口关闭后就会恢复原有的path配置<br>用户局限：仅对当前用户</li>
-<li>通过修改.bashrc文件: <code>vim ~/.bashrc</code> (推荐)<br>//在最后一行添上：<br><code>export PATH=export PATH=/var/lib/mongodb/bin:$PATH</code><br>生效方法：（有以下两种）<br>1、关闭当前终端窗口，重新打开一个新终端窗口就能生效<br>2、输入<code>source ~/.bashrc</code>命令，立即生效<br>有效期限：永久有效<br>用户局限：仅对当前用户</li>
-<li>通过修改profile文件: <code>vim /etc/profile</code><br>export PATH 找到设置PATH的行，添加<br><code>export PATH=export PATH=/var/lib/mongodb/bin:$PATH</code><br>生效方法：系统重启<br>有效期限：永久有效<br>用户局限：对所有用户</li>
-<li><p>通过修改environment文件: <code>vim /etc/environment</code></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">PATH=&quot;/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin&quot;中加入&quot;:/usr/local/mongodb/bin&quot;</span><br></pre></td></tr></table></figure>
-<p>生效方法：系统重启<br>有效期限：永久有效<br>用户局限：对所有用户</p>
+<h3 id="Nginx"><a href="#Nginx" class="headerlink" title="Nginx"></a><a href="http://blog.720ui.com/2016/nginx_action_01_virtual%20servers/" target="_blank" rel="noopener">Nginx</a></h3><h4 id="Nginx反向代理"><a href="#Nginx反向代理" class="headerlink" title="Nginx反向代理"></a>Nginx反向代理</h4><ol>
+<li><a href="https://juejin.im/post/5a050d7f51882578d84eeaf8" target="_blank" rel="noopener">Nginx文档翻译</a></li>
+<li><a href="https://juejin.im/entry/58354604d20309005fe2c419" target="_blank" rel="noopener">Nginx 配置简述</a></li>
+<li><a href="https://juejin.im/entry/585c9f9e1b69e600560c9003" target="_blank" rel="noopener">Nginx基础</a></li>
+<li><a href="https://blog.csdn.net/vblittleboy/article/details/8103264" target="_blank" rel="noopener">chmod 777 修改权限</a></li>
+<li><a href="https://blog.csdn.net/xinyflove/article/details/79375217" target="_blank" rel="noopener">nginx到系统服务(service)</a></li>
+<li><p><a href="http://www.jb51.net/article/136035.htm" target="_blank" rel="noopener">设置nginx开机自动启动</a><br><a href="https://blog.csdn.net/u013870094/article/details/52463026" target="_blank" rel="noopener">参考</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ln -s /bin/systemctl /usr/local/bin/systemcel</span><br><span class="line">systemcel enable nginx</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>查看进程命令<br><code>ps -ef | grep nginx</code></p>
+</li>
+<li><p>Nginx虚拟域名配置及测试验证</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">//编辑nginx.conf</span><br><span class="line">sudo vim /usr/local/nginx/conf/nginx.conf</span><br><span class="line">//增加行 </span><br><span class="line">include vhost/*.conf</span><br><span class="line">//保存退出</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">//在/usr/local/nginx/conf目录新建vhost文件夹</span><br><span class="line">mkdir vhost</span><br><span class="line">//创建每个域名的配置</span><br><span class="line">sudo vim jimisun.com.conf</span><br><span class="line">//节点中增加入响应的配置 端口转发  或者访问文件系统</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>使用nginx配置nodejs服务进行反向代理<br>修改nginx.conf</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">upstream sample &#123;  </span><br><span class="line">    server 127.0.0.1:3000;  </span><br><span class="line">    keepalive 64;  </span><br><span class="line">&#125;  </span><br><span class="line">server &#123;  </span><br><span class="line">  listen 80;  </span><br><span class="line">  ....  </span><br><span class="line">  server_name 127.0.0.1;  </span><br><span class="line">  ....  </span><br><span class="line">  location / &#123;  </span><br><span class="line">    proxy_redirect off;  </span><br><span class="line">    proxy_set_header X-Real-IP $remote_addr;  </span><br><span class="line">    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;  </span><br><span class="line">    proxy_set_header X-Forwarded-Proto $scheme;  </span><br><span class="line">    proxy_set_header Host $http_host;  </span><br><span class="line">    proxy_set_header X-NginX-Proxy true;  </span><br><span class="line">    proxy_set_header Connection &quot;&quot;;  </span><br><span class="line">    proxy_http_version 1.1;  </span><br><span class="line">    proxy_pass http://sample;  </span><br><span class="line">  &#125;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><code>nginx -s reload</code>重启</p>
 </li>
 </ol>
-<h4 id="环境变量的查看与删除"><a href="#环境变量的查看与删除" class="headerlink" title="环境变量的查看与删除"></a>环境变量的查看与删除</h4><blockquote>
-<p><code>echo $PATH</code>: 查看单个环境变量<br>   <code>env</code>: 查看所有环境变量<br>   <code>set</code>: 查看所有本地定义的环境变量<br>   <code>unset $变量名</code>: 可以删除指定的环境变量</p>
-</blockquote>
-<h4 id="常用的环境变量"><a href="#常用的环境变量" class="headerlink" title="常用的环境变量"></a>常用的环境变量</h4><blockquote>
-<p><code>PATH</code> 决定了shell将到哪些目录中寻找命令或程序<br>  <code>HOME</code>当前用户主目录<br>  <code>HISTSIZE</code>　历史记录数<br>  <code>LOGNAME</code> 当前用户的登录名<br>  <code>HOSTNAME</code>　指主机的名称<br>  <code>SHELL</code> 当前用户Shell类型<br>  <code>LANGUGE</code> 　语言相关的环境变量，多语言可以修改此环境变量<br>  <code>MAIL</code>　当前用户的邮件存放目录<br>  <code>PS1</code>　基本提示符，对于root用户是#，对于普通用户是$</p>
-</blockquote>
-<h3 id="linux命令"><a href="#linux命令" class="headerlink" title="linux命令"></a><a href="http://man.linuxde.net/sub/%E7%9B%AE%E5%BD%95%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C" target="_blank" rel="noopener">linux命令</a></h3>
+<h4 id="nginx开机自动启动"><a href="#nginx开机自动启动" class="headerlink" title="nginx开机自动启动"></a><a href="https://blog.csdn.net/u013870094/article/details/52463026" target="_blank" rel="noopener">nginx开机自动启动</a></h4><ol>
+<li>在linux系统的/etc/init.d/目录下创建nginx文件，使用如下命令：<br><code>vim /etc/init.d/nginx</code></li>
+<li>添加脚本命令<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br></pre></td><td class="code"><pre><span class="line">#!/bin/sh</span><br><span class="line">#</span><br><span class="line"># nginx - this script starts and stops the nginx daemon</span><br><span class="line">#</span><br><span class="line"># chkconfig:   - 85 15</span><br><span class="line"># description:  NGINX is an HTTP(S) server, HTTP(S) reverse \</span><br><span class="line">#               proxy and IMAP/POP3 proxy server</span><br><span class="line"># processname: nginx</span><br><span class="line"># config:      /server/runtime/nginx/1.13.7/conf</span><br><span class="line"># config:      /etc/sysconfig/nginx</span><br><span class="line"># pidfile:     /var/run/nginx.pid</span><br><span class="line"># Source function library.</span><br><span class="line">. /etc/rc.d/init.d/functions</span><br><span class="line"># Source networking configuration.</span><br><span class="line">. /etc/sysconfig/network</span><br><span class="line"># Check that networking is up.</span><br><span class="line">[ &quot;$NETWORKING&quot; = &quot;no&quot; ] &amp;&amp; exit 0</span><br><span class="line">nginx=&quot;/usr/sbin/nginx&quot;</span><br><span class="line">prog=$(basename $nginx)</span><br><span class="line">NGINX_CONF_FILE=&quot;/etc/nginx/nginx.conf&quot;</span><br><span class="line">[ -f /etc/sysconfig/nginx ] &amp;&amp; . /etc/sysconfig/nginx</span><br><span class="line">lockfile=/var/lock/subsys/nginx</span><br><span class="line">make_dirs() &#123;</span><br><span class="line">   # make required directories</span><br><span class="line">   user=`$nginx -V 2&gt;&amp;1 | grep &quot;configure arguments:&quot; | sed &apos;s/[^*]*--user=\([^ ]*\).*/\1/g&apos; -`</span><br><span class="line">   if [ -z &quot;`grep $user /etc/passwd`&quot; ]; then</span><br><span class="line">       useradd -M -s /bin/nologin $user</span><br><span class="line">   fi</span><br><span class="line">   options=`$nginx -V 2&gt;&amp;1 | grep &apos;configure arguments:&apos;`</span><br><span class="line">   for opt in $options; do</span><br><span class="line">       if [ `echo $opt | grep &apos;.*-temp-path&apos;` ]; then</span><br><span class="line">           value=`echo $opt | cut -d &quot;=&quot; -f 2`</span><br><span class="line">           if [ ! -d &quot;$value&quot; ]; then</span><br><span class="line">               # echo &quot;creating&quot; $value</span><br><span class="line">               mkdir -p $value &amp;&amp; chown -R $user $value</span><br><span class="line">           fi</span><br><span class="line">       fi</span><br><span class="line">   done</span><br><span class="line">&#125;</span><br><span class="line">start() &#123;</span><br><span class="line">    [ -x $nginx ] || exit 5</span><br><span class="line">    [ -f $NGINX_CONF_FILE ] || exit 6</span><br><span class="line">    make_dirs</span><br><span class="line">    echo -n $&quot;Starting $prog: &quot;</span><br><span class="line">    daemon $nginx -c $NGINX_CONF_FILE</span><br><span class="line">    retval=$?</span><br><span class="line">    echo</span><br><span class="line">    [ $retval -eq 0 ] &amp;&amp; touch $lockfile</span><br><span class="line">    return $retval</span><br><span class="line">&#125;</span><br><span class="line">stop() &#123;</span><br><span class="line">    echo -n $&quot;Stopping $prog: &quot;</span><br><span class="line">    killproc $prog -QUIT</span><br><span class="line">    retval=$?</span><br><span class="line">    echo</span><br><span class="line">    [ $retval -eq 0 ] &amp;&amp; rm -f $lockfile</span><br><span class="line">    return $retval</span><br><span class="line">&#125;</span><br><span class="line">restart() &#123;</span><br><span class="line">    configtest || return $?</span><br><span class="line">    stop</span><br><span class="line">    sleep 1</span><br><span class="line">    start</span><br><span class="line">&#125;</span><br><span class="line">reload() &#123;</span><br><span class="line">    configtest || return $?</span><br><span class="line">    echo -n $&quot;Reloading $prog: &quot;</span><br><span class="line">    killproc $nginx -HUP</span><br><span class="line">    RETVAL=$?</span><br><span class="line">    echo</span><br><span class="line">&#125;</span><br><span class="line">force_reload() &#123;</span><br><span class="line">    restart</span><br><span class="line">&#125;</span><br><span class="line">configtest() &#123;</span><br><span class="line">  $nginx -t -c $NGINX_CONF_FILE</span><br><span class="line">&#125;</span><br><span class="line">rh_status() &#123;</span><br><span class="line">    status $prog</span><br><span class="line">&#125;</span><br><span class="line">rh_status_q() &#123;</span><br><span class="line">    rh_status &gt;/dev/null 2&gt;&amp;1</span><br><span class="line">&#125;</span><br><span class="line">case &quot;$1&quot; in</span><br><span class="line">    start)</span><br><span class="line">        rh_status_q &amp;&amp; exit 0</span><br><span class="line">        $1</span><br><span class="line">        ;;</span><br><span class="line">    stop)</span><br><span class="line">        rh_status_q || exit 0</span><br><span class="line">        $1</span><br><span class="line">        ;;</span><br><span class="line">    restart|configtest)</span><br><span class="line">        $1</span><br><span class="line">        ;;</span><br><span class="line">    reload)</span><br><span class="line">        rh_status_q || exit 7</span><br><span class="line">        $1</span><br><span class="line">        ;;</span><br><span class="line">    force-reload)</span><br><span class="line">        force_reload</span><br><span class="line">        ;;</span><br><span class="line">    status)</span><br><span class="line">        rh_status</span><br><span class="line">        ;;</span><br><span class="line">    condrestart|try-restart)</span><br><span class="line">        rh_status_q || exit 0</span><br><span class="line">            ;;</span><br><span class="line">    *)</span><br><span class="line">        echo $&quot;Usage: $0 &#123;start|stop|status|restart|condrestart|try-restart|reload|force-reload|configtest&#125;&quot;</span><br><span class="line">        exit 2</span><br><span class="line">esac</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+
       
     </div>
     
@@ -495,7 +485,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://xshaohua.cc/2018/04/05/NodeJS---了解的一些linux知识/" title="NodeJS---了解的一些linux知识">http://xshaohua.cc/2018/04/05/NodeJS---了解的一些linux知识/</a>
+    <a href="http://xshaohua.cc/2018/04/09/Nginx/" title="Nginx">http://xshaohua.cc/2018/04/09/Nginx/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -526,8 +516,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/04/04/NodeJS---部署阿里云上nodeJS安装/" rel="next" title="NodeJS---部署阿里云上nodeJS安装">
-                <i class="fa fa-chevron-left"></i> NodeJS---部署阿里云上nodeJS安装
+              <a href="/2018/04/07/mongodb在服务器系统环境为Centos7.0下的安装/" rel="next" title="mongodb在服务器系统环境为Centos7.0下的安装">
+                <i class="fa fa-chevron-left"></i> mongodb在服务器系统环境为Centos7.0下的安装
               </a>
             
           </div>
@@ -536,8 +526,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/04/06/网络基础知识之 HTTP 协议/" rel="prev" title="网络基础知识之 HTTP 协议">
-                网络基础知识之 HTTP 协议 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/04/10/网络基础知识之localhost,127.0.0.1,本机地址的理解/" rel="prev" title="网络基础知识之localhost,127.0.0.1,本机地址的理解">
+                网络基础知识之localhost,127.0.0.1,本机地址的理解 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -624,7 +614,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-count">9</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -646,7 +636,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -718,7 +708,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#centOS目录结构"><span class="nav-number">1.</span> <span class="nav-text">centOS目录结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#linux的ln指令详解"><span class="nav-number">2.</span> <span class="nav-text">linux的ln指令详解</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#linux查看和修改PATH环境变量的方法"><span class="nav-number">3.</span> <span class="nav-text">linux查看和修改PATH环境变量的方法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#添加mongodb-install-directory的路径为-var-lib-mongodb为环境变量的四种方案"><span class="nav-number">3.1.</span> <span class="nav-text">添加mongodb-install-directory的路径为/var/lib/mongodb为环境变量的四种方案</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#环境变量的查看与删除"><span class="nav-number">3.2.</span> <span class="nav-text">环境变量的查看与删除</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#常用的环境变量"><span class="nav-number">3.3.</span> <span class="nav-text">常用的环境变量</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#linux命令"><span class="nav-number">4.</span> <span class="nav-text">linux命令</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Nginx优点"><span class="nav-number">1.</span> <span class="nav-text">Nginx优点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Nginx安装"><span class="nav-number">2.</span> <span class="nav-text">Nginx安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Nginx"><span class="nav-number">3.</span> <span class="nav-text">Nginx</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Nginx反向代理"><span class="nav-number">3.1.</span> <span class="nav-text">Nginx反向代理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#nginx开机自动启动"><span class="nav-number">3.2.</span> <span class="nav-text">nginx开机自动启动</span></a></li></ol></li></ol></div>
             
 
           </div>
