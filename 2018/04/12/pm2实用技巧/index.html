@@ -94,7 +94,7 @@
 <meta property="og:site_name" content="行否">
 <meta property="og:description" content="pm2实用技巧,以centos7.0为例">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-04-12T09:59:20.246Z">
+<meta property="og:updated_time" content="2018-04-25T08:43:29.280Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="pm2实用技巧">
 <meta name="twitter:description" content="pm2实用技巧,以centos7.0为例">
@@ -450,7 +450,8 @@
 <li><p>启动<br><code>pm2 start test.json</code></p>
 </li>
 </ol>
-<h3 id="设置服务器重启pm2自动启动项目"><a href="#设置服务器重启pm2自动启动项目" class="headerlink" title="设置服务器重启pm2自动启动项目"></a>设置服务器重启pm2自动启动项目</h3>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># pm2 save</span><br><span class="line"># `more ~/.pm2/dump.pm2`查看这个文件是否已经有保存到数据;</span><br><span class="line"># pm2 startup</span><br></pre></td></tr></table></figure>
+<h3 id="设置服务器重启pm2自动启动项目"><a href="#设置服务器重启pm2自动启动项目" class="headerlink" title="设置服务器重启pm2自动启动项目"></a>设置服务器重启pm2自动启动项目</h3>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># pm2 save</span><br><span class="line"># more ~/.pm2/dump.pm2 //查看这个文件是否已经有保存到数据;</span><br><span class="line"># pm2 startup</span><br></pre></td></tr></table></figure>
+<h3 id="pm2开机启动脚本"><a href="#pm2开机启动脚本" class="headerlink" title="pm2开机启动脚本"></a><a href="https://segmentfault.com/a/1190000006033653" target="_blank" rel="noopener">pm2开机启动脚本</a></h3>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <p>###自动化部署<br>shell脚本实现资源拉取、服务重启、nginx缓存更新等操作，再配合pm2的监控功能</p>
 <h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><p><a href="http://pm2.keymetrics.io/docs" target="_blank" rel="noopener">官网</a><br><a href="https://blog.csdn.net/chengxuyuanyonghu/article/details/74910875" target="_blank" rel="noopener">详情</a><br>[]</p>
 
@@ -721,7 +722,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#在服务器上的安装"><span class="nav-number">1.</span> <span class="nav-text">在服务器上的安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#pm2命令"><span class="nav-number">2.</span> <span class="nav-text">pm2命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#PM2目录结构"><span class="nav-number">3.</span> <span class="nav-text">PM2目录结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#自定义启动文件"><span class="nav-number">4.</span> <span class="nav-text">自定义启动文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置服务器重启pm2自动启动项目"><span class="nav-number">5.</span> <span class="nav-text">设置服务器重启pm2自动启动项目</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#参考"><span class="nav-number">6.</span> <span class="nav-text">参考</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#在服务器上的安装"><span class="nav-number">1.</span> <span class="nav-text">在服务器上的安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#pm2命令"><span class="nav-number">2.</span> <span class="nav-text">pm2命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#PM2目录结构"><span class="nav-number">3.</span> <span class="nav-text">PM2目录结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#自定义启动文件"><span class="nav-number">4.</span> <span class="nav-text">自定义启动文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置服务器重启pm2自动启动项目"><span class="nav-number">5.</span> <span class="nav-text">设置服务器重启pm2自动启动项目</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#pm2开机启动脚本"><span class="nav-number">6.</span> <span class="nav-text">pm2开机启动脚本</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#参考"><span class="nav-number">7.</span> <span class="nav-text">参考</span></a></li></ol></div>
             
 
           </div>
